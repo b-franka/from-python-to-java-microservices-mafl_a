@@ -1,13 +1,16 @@
 package postal_label_generator_service;
 
+import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.junit.Test;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class PdfCreatorTest {
 
     @Test
-    public void convertPostalDataToPdf() {
+    public void testConvertPostalDataToPdf() throws IOException, COSVisitorException {
         ArrayList<String> data = new ArrayList<>();
         data.add("Szerep Elek");
         data.add("Hungary");
